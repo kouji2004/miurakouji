@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Sora:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Zen+Antique&display=swap');
+
+:root{
+    --box-shadow:0 8px 22px rgba(0,0,0,0.2);
+}
+
+*{
+    transition: all 0.2s ease;
+}
+
+body{
+    font-family: 'Zen Antique', serif;
+    color: white;
+}
+
+html{
+    font-size: 62.5%; /*10px*/
+}
+h2,
+h3{
+    font-size: 3rem;
+    font-weight: 540;
+    position: relative;
+    z-index: 1;
+}
+
+a,
+p{
+    position: relative;
+    z-index: 1;
+}
+section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+header{
+
+    padding:2.7rem 5.4rem;
+    text-shadow:  black 1px 3px 6px;
+    z-index: 1000;
+    position:fixed;
+}
+
+/*menubar section*/
+header .menu-bar{
+    position: absolute;
+    top: 30vh;
+    right:-200px;
+    background-color: #000;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);    
+    opacity: 0;
+}
+header .menu-bar.active{
+    opacity: 1;
+    right: -20px;
+}
+header .menu-bar li{
+    margin-bottom: 3rem;
+}
+header .menu-bar li a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+}
+header .menu-bar li a:hover{
+    color: aquamarine;
+}
+
+
+header .book-open-btn{
+    display: none;
+}
+header .book-open-btn.active{
+    display: block;
+}
+header .book-colose{
+    display: block;
+}
+header .book-colose.active{
+    display: none;
+}
+
+
+
+.logo-title{
+    cursor: pointer;
+}
+header img{
+    width: 3.5rem;
+    cursor: pointer;
+}
+
+/*hero*/
+.hero{
+    background-image: url(./images/another-world.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.hero::after{
+    content:"";
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.hero .title{
+    transform: translateY(240px);
+}
+.hero h1{
+    text-shadow: black 1px 3px 6px;
+    font-size: 7.5rem;
+}
+.hero h3{
+    width: 450px;
+    text-align: right;
+    text-shadow: black 1px 3px 6px;
+}
+
+/*sale section*/
+.sale h2{
+    font-size: 4rem;
+}
+.sale h3{
+    font-size: 3rem;
+}
+.sale img{
+    width: 100%;
+}
+.card-effect{
+    box-shadow: var(--box-shadow);
+}
+.game-card{
+    background-color: rgba(255, 255, 255);
+}
+.game-card h5{
+    font-size:2rem;
+}
+
+.game-card p{
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.1rem;
+}
+
+
+
+
+
+/*conpany*/
+.conpany{
+    background-image:url(./images/house.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.conpany-title{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+.conpany-text{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+.conpany::after{
+    content:"";
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.conpany h2{
+    font-size: 3.9rem;
+}
+.conpany p{    
+    font-size: 2.5rem;
+    line-height: 3.9rem;
+}
+.conpany-text-last{
+    position: absolute;
+    top: 70%;
+    left: 7%;
+}
+
+.conpany-info .more a{
+    padding: 0.6rem;
+    font-size: 1.7rem;
+    color: white;
+    display: inline-block;
+}
+.conpany-info .more a:hover{
+    color: aquamarine;
+    transform: translateX(1rem);
+}
+
+/*hardware*/
+.hardware{
+    width: 100%;
+    height: 100%;
+}
+
+.hardware-card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hardware-card h3{
+    position: absolute;
+    font-size: 5.5rem;
+    color: white;
+    opacity: 0;
+    padding: 150px 30px;
+}
+.hardware-card .overlay{
+    content:"";
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.hardware-card:hover .overlay{
+    background-color: rgb(13, 71, 92);
+    opacity: 0.3;
+}
+
+
+
+
+.hardware-card h3:hover{
+    opacity: 1;
+    
+}
+.hardware-card img:hover{
+    transform: scale(1.1);
+}
+
+/*contact section*/
+.contact{
+    background-image: url(./images/butterfly.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.contact input{
+    height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.contact textarea{
+    width: 70%;
+}
+.contact .vision-sight-logo{
+    position: absolute;
+    bottom: 10%;
+    right:  8%;
+    font-size: 4rem;
+}
+
+/*footer section*/
+footer{
+    padding: 40px;
+    font-size: 2rem;
+}
+footer h2{
+    font-size: 3rem;
+    height: 50%;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    color: aquamarine;
+}
+
+@media(max-width:1000px){
+    .hero h1{
+        font-size: 5rem;
+    }
+    .hero h3{
+        width: 400px;
+        font-size: 3rem;
+    }
+}
+@media(max-width:760px){
+    .hero .title{
+        transform: translateY(-50px);
+        text-align: center;
+    }
+    .hero h1{
+        font-size: 6rem;
+    }
+    .hero h3{
+    width: 100%;
+    text-align: center;
+    }
+}
+@media(max-width:576px){
+    html{
+        font-size: 45%;
+    }
+    .hero h3{
+    font-size: 2rem;
+    }
+
+    /*copany section*/
+    .conpany-info{
+        text-align: center !important;
+        padding: 2rem !important;
+    }
+    
+    .conpany-text-last{
+        position: static;
+        margin-top: 30rem;
+    }
+    .conpany-info h2{
+        margin-bottom: 4.6rem;
+    }
+    .conpany-info p{
+        line-height: 5rem;
+        font-size: 2.2rem;
+    }
+    .conpany-info .more{
+        margin-top: 9rem;
+    }
+    .conpany-title{
+        text-align: center !important; 
+        position: static;
+    }
+    .conpany-text{
+        text-align: center !important;
+        position: static;
+    }
+
+    /*contact section*/
+    .contact h2{
+        font-size: 4.6rem;
+        text-align: center;
+    }
+    /*footer*/
+    footer{
+        padding: 15px;
+    }
+}
